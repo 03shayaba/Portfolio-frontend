@@ -4,15 +4,28 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Custom PrimeReact Timeline Mobile Responsiveness */
+@media (max-width: 767px) {
+  .customized-timeline .p-timeline-event-opposite,
+  .customized-timeline.p-timeline-left .p-timeline-event-opposite {
+    flex: 0 !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    width: 0 !important;
+    display: none !important;
+  }
+  
+  .customized-timeline .p-timeline-event-content,
+  .customized-timeline.p-timeline-left .p-timeline-event-content {
+    padding-left: 0.75rem !important;
+    width: 100% !important;
+  }
 
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  .customized-timeline .p-card .p-card-body {
+    padding: 1rem !important;
+  }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: white;
-    background: linear-gradient(to right, #467ee6, #dfe3ea);
-} */
+  .customized-timeline .p-card .p-card-content {
+    padding: 0 !important;
+  }
+}

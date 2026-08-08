@@ -83,10 +83,10 @@ const skillsData1 = [
 const Skills = () => {
   return (
     <div className="text-white pt-16 pb-20 px-4 sm:px-8 md:px-16 max-w-7xl mx-auto">
-      <div className="text-3xl sm:text-4xl font-bold text-center bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text hover:text-white">
+      <div className="text-3xl sm:text-4xl font-bold text-center bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text">
         Skills
       </div>
-      <hr className="border-t-4 w-24 sm:w-32 mx-auto mt-3 border-blue-500 shadow-xl" />
+      <hr className="border-t-4 w-24 sm:w-32 mx-auto mt-3 border-cyan-400 shadow-lg shadow-cyan-500/30" />
 
       <p className="text-sm sm:text-base md:text-lg text-center mt-4 text-gray-300 max-w-2xl mx-auto">
         A collection of my technical skills and expertise honed through various projects and experiences.
@@ -97,9 +97,9 @@ const Skills = () => {
         {skillsData.map((section, index) => (
           <div
             key={index}
-            className="border-2 border-blue-500 rounded-xl p-4 sm:p-6 shadow-xl bg-gray-950 shadow-blue-500/30 hover:shadow-2xl transition-all"
+            className="border-2 border-cyan-500/80 rounded-xl p-4 sm:p-6 shadow-xl bg-gray-950 shadow-cyan-500/25 hover:shadow-cyan-400/30 transition-all"
           >
-            <h2 className="text-lg sm:text-xl bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text text-center underline font-bold">
+            <h2 className="text-lg sm:text-xl bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text text-center underline font-bold">
               {section.category}
             </h2>
             <div className="flex flex-wrap gap-2.5 mt-4 justify-center">
@@ -122,9 +122,9 @@ const Skills = () => {
         {skillsData1.map((section, index) => (
           <div
             key={index}
-            className="border-2 border-blue-500 rounded-xl p-4 sm:p-6 bg-gray-950 shadow-xl shadow-blue-500/30 hover:shadow-2xl transition-all"
+            className="border-2 border-cyan-500/80 rounded-xl p-4 sm:p-6 bg-gray-950 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-400/30 transition-all"
           >
-            <h2 className="text-lg sm:text-xl bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text text-center underline font-bold">
+            <h2 className="text-lg sm:text-xl bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text text-center underline font-bold">
               {section.category}
             </h2>
             <div className="flex flex-wrap gap-2.5 mt-4 justify-center">

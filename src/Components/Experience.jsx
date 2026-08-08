@@ -7,11 +7,11 @@ const Experience = () => {
     <div className="pt-16 pb-16 px-4 sm:px-8 md:px-16 max-w-7xl mx-auto">
       {/* Header */}
       <div className="text-white">
-        <h1 className="text-center text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text hover:text-white">
+        <h1 className="text-center text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text">
           Experience
         </h1>
 
-        <hr className="border-t-4 border-blue-500 mx-auto w-24 sm:w-32 my-3 shadow-lg" />
+        <hr className="border-t-4 border-cyan-400 mx-auto w-24 sm:w-32 my-3 shadow-lg shadow-cyan-500/30" />
 
         <p className="text-center max-w-2xl mx-auto text-sm sm:text-base md:text-lg pb-2 text-gray-300">
           A showcase of my professional journey, beginning with my role as a MERN Stack Intern at Hanumant Technology Private Limited.
@@ -20,7 +20,7 @@ const Experience = () => {
 
       {/* Experience Card */}
       <div
-        className="max-w-4xl mx-auto border-2 border-blue-500 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl shadow-blue-500/30 mt-6 hover:scale-[1.01] transition-transform duration-300 bg-gray-950"
+        className="max-w-4xl mx-auto border-2 border-cyan-500/80 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl shadow-cyan-500/25 mt-6 hover:scale-[1.01] transition-transform duration-300 bg-gray-950"
       >
         {/* Header Row */}
         <div className="flex flex-col sm:flex-row gap-4 items-center mb-5">
@@ -28,7 +28,7 @@ const Experience = () => {
             <img className="w-12 h-8 sm:w-16 sm:h-10 object-contain" src={hanumant} alt="Hanumant Technology" />
           </div>
           <div className="text-center sm:text-left">
-            <h2 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text">MERN Stack Intern</h2>
+            <h2 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text">MERN Stack Intern</h2>
             <p className='text-gray-200 text-sm sm:text-base font-semibold'>Hanumant Technology Pvt. Ltd.</p>
             <p className='text-gray-400 text-xs sm:text-sm'>June 2025 - December 2025</p>
           </div>
@@ -53,7 +53,7 @@ const Experience = () => {
             ].map((skill, i) => (
               <div
                 key={i}
-                className="text-gray-200 hover:text-white border border-gray-700 rounded-lg px-2.5 py-1 sm:px-3 sm:py-1.5 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-500 transition-colors"
+                className="text-gray-200 hover:text-slate-950 border border-cyan-500/30 rounded-lg px-2.5 py-1 sm:px-3 sm:py-1.5 hover:bg-gradient-to-r hover:from-cyan-500 hover:via-teal-400 hover:to-blue-500 hover:font-extrabold transition-all duration-300"
               >
                 {skill}
               </div>

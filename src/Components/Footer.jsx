@@ -4,7 +4,7 @@ import { FaGithubSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className='text-white pt-8 pb-8 border-t border-gray-800/50 bg-black/60 backdrop-blur-md px-4'>
-        <h2 className='text-center text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text'>Shayaba Bano</h2>
+        <h2 className='text-center text-2xl sm:text-3xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text'>Shayaba Bano</h2>
         <div className='flex flex-wrap justify-center items-center gap-4 sm:gap-8 mt-4 text-sm font-semibold text-gray-300'>
           <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className='hover:text-teal-400 transition-colors cursor-pointer'>About</button>
           <button onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })} className='hover:text-teal-400 transition-colors cursor-pointer'>Skills</button>

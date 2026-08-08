@@ -67,8 +67,8 @@ const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     return (
         <div className='text-white pt-16 pb-16 px-4 sm:px-8 md:px-16 max-w-7xl mx-auto'>
-            <h1 className='text-3xl sm:text-4xl text-center font-bold bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text'>My Projects</h1>
-            <hr className='border-t-4 w-24 sm:w-32 mx-auto my-3 border-blue-500 shadow-xl' />
+            <h1 className='text-3xl sm:text-4xl text-center font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text'>My Projects</h1>
+            <hr className='border-t-4 w-24 sm:w-32 mx-auto my-3 border-cyan-400 shadow-lg shadow-cyan-500/30' />
             <p className='text-gray-300 text-sm sm:text-base md:text-lg text-center mt-2 max-w-2xl mx-auto'>
                 A showcase of the projects I have worked on, highlighting my skills and experience in various technologies
             </p>
@@ -79,11 +79,11 @@ const Projects = () => {
                     <div 
                         key={project.id} 
                         onClick={() => setSelectedProject(project)} 
-                        className='border-2 border-blue-500 text-white rounded-2xl p-4 sm:p-5 bg-gray-950 shadow-xl hover:shadow-blue-500/40 hover:scale-[1.02] transition-all duration-300 w-full max-w-sm flex flex-col justify-between cursor-pointer'
+                        className='border-2 border-cyan-500/80 text-white rounded-2xl p-4 sm:p-5 bg-gray-950 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-400/40 hover:scale-[1.02] transition-all duration-300 w-full max-w-sm flex flex-col justify-between cursor-pointer'
                     >
                         <div>
                             <img src={project.image} alt={project.title} className='w-full h-44 sm:h-48 object-cover rounded-lg mb-4' />
-                            <h2 className='text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text'>{project.title}</h2>
+                            <h2 className='text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text'>{project.title}</h2>
                             <p className='text-gray-300 text-xs sm:text-sm mb-4 line-clamp-3'>{project.description}</p>
                         </div>
 
@@ -91,7 +91,7 @@ const Projects = () => {
                             <h3 className='text-xs sm:text-sm font-semibold mb-2 text-gray-200'>Technologies Used:</h3>
                             <div className='flex flex-wrap gap-1.5 mb-4'>
                                 {project.technologies.map((tech, index) => (
-                                    <span key={index} className='text-xs px-2.5 py-1 rounded-md bg-gradient-to-r from-blue-600 to-teal-600 text-white font-medium'>
+                                    <span key={index} className='text-xs px-2.5 py-1 rounded-md bg-gradient-to-r from-cyan-500 via-teal-400 to-blue-500 text-slate-950 font-extrabold shadow-sm'>
                                         {tech}
                                     </span>
                                 ))}
@@ -103,7 +103,7 @@ const Projects = () => {
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     onClick={(e) => e.stopPropagation()} 
-                                    className='text-blue-400 hover:text-blue-300 text-xs sm:text-sm font-semibold hover:underline'
+                                    className='text-cyan-400 hover:text-teal-300 text-xs sm:text-sm font-semibold hover:underline'
                                 >
                                     Live Link ↗
                                 </a>
@@ -116,15 +116,15 @@ const Projects = () => {
             {/* Expanded Card / Modal */}
             {selectedProject && (
                 <div className='fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 p-4 overflow-y-auto'>
-                    <div className='bg-gray-900 border border-blue-500/50 rounded-2xl p-5 sm:p-8 w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl relative text-white'>
+                    <div className='bg-gray-950 border-2 border-cyan-500/80 rounded-2xl p-5 sm:p-8 w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl shadow-cyan-500/30 relative text-white'>
                         {/* Close Button & Title */}
                         <div className='flex justify-between items-start mb-4 gap-4'>
-                            <h2 className='text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text'>
+                            <h2 className='text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text'>
                                 {selectedProject.title}
                             </h2>
                             <button
                                 onClick={() => setSelectedProject(null)}
-                                className="text-gray-400 hover:text-white text-3xl font-bold leading-none p-1 cursor-pointer"
+                                className="text-gray-400 hover:text-cyan-400 text-3xl font-bold leading-none p-1 cursor-pointer transition-colors"
                                 aria-label="Close"
                             >
                                 &times;
@@ -136,7 +136,7 @@ const Projects = () => {
                         <h3 className='text-sm sm:text-base font-semibold mb-2 text-gray-200'>Technologies Used:</h3>
                         <div className='flex flex-wrap gap-2 mb-6'>
                             {selectedProject.technologies.map((tech, index) => (
-                                <span key={index} className='text-xs sm:text-sm px-3 py-1 rounded-lg bg-gray-800 border border-gray-700 text-teal-300 font-medium'>
+                                <span key={index} className='text-xs sm:text-sm px-3 py-1 rounded-lg bg-gray-900 border border-cyan-500/40 text-cyan-300 font-semibold'>
                                     {tech}
                                 </span>
                             ))}
@@ -145,7 +145,7 @@ const Projects = () => {
                         <div className='flex justify-end gap-3 border-t border-gray-800 pt-4'>
                             <button 
                                 onClick={() => setSelectedProject(null)}
-                                className='px-4 py-2 text-xs sm:text-sm rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-200 cursor-pointer'
+                                className='px-4 py-2 text-xs sm:text-sm rounded-xl bg-gray-900 border border-gray-700 hover:border-cyan-400 text-gray-200 cursor-pointer transition-all'
                             >
                                 Close
                             </button>
@@ -153,7 +153,7 @@ const Projects = () => {
                                 href={`https://${selectedProject.link}`} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                className='px-4 py-2 text-xs sm:text-sm rounded-lg bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform cursor-pointer'
+                                className='px-5 py-2 text-xs sm:text-sm bg-gradient-to-r from-cyan-500 via-teal-400 to-blue-500 hover:from-cyan-400 hover:to-teal-300 text-slate-950 font-extrabold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-teal-400/40 hover:scale-105 transition-all duration-300 cursor-pointer'
                             >
                                 Visit Project ↗
                             </a>
