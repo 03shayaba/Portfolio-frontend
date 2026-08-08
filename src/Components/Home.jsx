@@ -8,7 +8,7 @@ import black from '../assets/black.avif';
 import { useState, useEffect } from 'react';
 import profile from '../assets/Profile.png';
 const Home = () => {
-  const cvLink = 'https://drive.google.com/file/d/1W7Yf8DEUQWm9mPHG2cV_--ytNcf7WJq8/view?usp=drive_link'
+  const cvLink = 'https://drive.google.com/file/d/1LMhFl73_frvnE6721Z8AF3e2fLXeYeLj/view?usp=sharing'
   const [text, setText] = useState('');
   const name = " I'm Shayaba Bano";
   const speed = 100; // typing/deleting speed (ms per letter)
