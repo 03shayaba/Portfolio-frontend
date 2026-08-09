@@ -16,7 +16,7 @@ const projectsData = [
         title: "StudyNotion LMS",
         description: "A fully functional full-stack EdTech platform with dedicated Instructor and Student panels. Instructors can seamlessly create and manage courses, section lectures, and media via Cloudinary. Students can explore courses, enroll using an integrated dummy payment gateway, watch video lessons, and rate courses. Built with secure JWT authentication,  and Redux state management.",
         technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Redux", "JWT", "Razorpay (Dummy Payment)", "Cloudinary"],
-        link: "https://study-notion-lms-4dkv-xqnasyzv1-03shayabas-projects.vercel.app/"
+        link: "study-notion-lms-4dkv.vercel.app"
     },
     {
         id: 2,
