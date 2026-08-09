@@ -6,19 +6,28 @@ import { useState } from 'react'
 import pr4 from '../assets/pr4.png'
 import pr5 from '../assets/pr5.png'
 import pr6 from '../assets/pr6.png'
+import studyNotionImg from '../assets/image.png'
 import bg from '../assets/bg.avif'
+
 const projectsData = [
-       {
+    {
         id: 1,
+        image: studyNotionImg,
+        title: "StudyNotion LMS",
+        description: "A fully functional full-stack EdTech platform (LMS) designed for creating, consuming, and rating educational content. Features seamless student and instructor dashboards, course creation, video lecture hosting, secure JWT authentication with OTP verification, Razorpay payment gateway integration, and Cloudinary media management.",
+        technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Redux", "JWT", "Razorpay", "Cloudinary"],
+        link: "https://study-notion-lms-4dkv-xqnasyzv1-03shayabas-projects.vercel.app/"
+    },
+    {
+        id: 2,
         image: pr4,
         title: "Influtics Clone",
         description: "Developed the frontend of an Influencer marketing platform clone using React, JavaScript, Tailwind CSS, and Hooks. Containerized the application using Docker with a Dockerfile and implemented a CI/CD pipeline using GitHub Actions.",
         technologies: ["React", "CSS", "JavaScript", "Tailwind CSS", "Docker", "GitHub Actions", "CI/CD"],
         link: "influtic-clone.netlify.app"
-      
-    }
-    ,    {
-        id: 2,
+    },
+    {
+        id: 3,
         image: pr5,
         title: "Web Code Editor",
         description: "The Web Code Editor is a full-stack application that allows users to write, edit, and manage code directly in the browser. It provides a modern development-like experience with real-time editing, authentication, and secure data storage.The application is built using React and Tailwind CSS on the frontend, powered by the Monaco Editor for an IDE-like coding interface. The backend is developed using Node.js, Express, and MongoDB, with secure authentication implemented using JWT and bcrypt.",
@@ -26,7 +35,7 @@ const projectsData = [
         link: "codeeditor111.netlify.app"
     },
     {
-        id: 3,
+        id: 4,
         image: pr6,
         title: "Task Manager",
         description: "The Task Manager Application is a full-stack web application that helps users create, update, manage, and track their projects and tasks efficiently. It is designed to improve productivity by allowing users to organize work, set priorities, and monitor progress in a simple and user-friendly interface.The application provides secure user authentication and personalized dashboards, ensuring that each user can manage only their own projects and tasks.",
@@ -34,7 +43,7 @@ const projectsData = [
         link: "task-manager-application.netlify.app"
     },
     {
-        id: 4,
+        id: 5,
         image: pr1,
         title: "Weather App",
         description: "Developed a weather application using HTML , css , Javascript and OpenWeather API, allowing users to search for weather information by city.",
@@ -42,7 +51,7 @@ const projectsData = [
         link: "weather123-web.netlify.app"
     },
     {
-        id: 5,
+        id: 6,
         image: pr2,
         title: "Proton Drive Clone",
         description: "Created a Proton Drive clone using HTML, CSS, and JavaScript that allows users to upload, delete, and organize files.",
@@ -50,21 +59,22 @@ const projectsData = [
         link: "proton-drive-4b33fc.netlify.app"
     },
     {
-        id: 6,
+        id: 7,
         image: pr3,
         title: "Ecommerce Website",
         description: "Built an Ecommerce website using HTML, CSS, and JavaScript that allows users to browse products, add them to a cart, and proceed to checkout.",
         technologies: ["React", "CSS", "JavaScript", "Tailwind CSS", "Context API"],
         link: "forever-app-123.netlify.app"
     }
-    
-
-
 ]
-
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+
+    const getFullUrl = (url) => {
+        return url.startsWith('http://') || url.startsWith('https://') ? url : `https://${url}`;
+    };
+
     return (
         <div className='text-white pt-16 pb-16 px-4 sm:px-8 md:px-16 max-w-7xl mx-auto'>
             <h1 className='text-3xl sm:text-4xl text-center font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text'>My Projects</h1>
@@ -99,7 +109,7 @@ const Projects = () => {
                             <div className='flex justify-between items-center pt-2 border-t border-gray-800'>
                                 <span className='text-xs text-teal-400 font-semibold'>Click for details</span>
                                 <a 
-                                    href={`https://${project.link}`} 
+                                    href={getFullUrl(project.link)} 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     onClick={(e) => e.stopPropagation()} 
@@ -150,7 +160,7 @@ const Projects = () => {
                                 Close
                             </button>
                             <a 
-                                href={`https://${selectedProject.link}`} 
+                                href={getFullUrl(selectedProject.link)} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 className='px-5 py-2 text-xs sm:text-sm bg-gradient-to-r from-cyan-500 via-teal-400 to-blue-500 hover:from-cyan-400 hover:to-teal-300 text-slate-950 font-extrabold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-teal-400/40 hover:scale-105 transition-all duration-300 cursor-pointer'
