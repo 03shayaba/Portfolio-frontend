@@ -14,7 +14,7 @@ const projectsData = [
         title: "Influtics Clone",
         description: "Developed the frontend of an Influencer marketing platform clone using React, JavaScript, Tailwind CSS, and Hooks. Containerized the application using Docker with a Dockerfile and implemented a CI/CD pipeline using GitHub Actions.",
         technologies: ["React", "CSS", "JavaScript", "Tailwind CSS", "Docker", "GitHub Actions", "CI/CD"],
-        link: "https://influtic-clone.netlify.app"
+        link: "influtic-clone.netlify.app"
       
     }
     ,    {
